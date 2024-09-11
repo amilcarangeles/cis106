@@ -1,6 +1,6 @@
 # Ubuntu
 
-![logo](UbuntuLogo.svg)
+![logo](UbuntuLogo.png)
 
 **Ubuntu** is a *Linux* distribution based on *Debian* and composed mostly of free and open-source software. **Ubuntu** is officially released in multiple editions: ***Desktop***, ***Server***,  and ***Core***  for Internet of things devices and robots. The operating system is developed by the British company Canonical, and a community of other developers, under a meritocratic governance model. As of October 2023, the most-recent release is 23.10 *("Mantic Minotaur")*, and the current long-term support release is 22.04 *("Jammy Jellyfish")*.
 
