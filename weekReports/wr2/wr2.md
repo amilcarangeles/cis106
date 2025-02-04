@@ -6,4 +6,4 @@
 <hr>
 
 ## Note link
-* [Notes 2](../../notes/notes2/notes.md)
+* [Notes 2](../../notes/notes2/notes2.md)
