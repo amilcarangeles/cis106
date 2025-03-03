@@ -1,6 +1,6 @@
 # Linux Commands Overview
 
-## 1. `echo`
+## 1. *echo*
 **Definition:**
 Prints text to the terminal.
 
@@ -16,7 +16,7 @@ Hello, World!
 
 ---
 
-## 2. `date`
+## 2. *date*
 **Definition:**
 Displays the current date and time.
 
@@ -32,7 +32,7 @@ Sun Mar 2 12:00:00 UTC 2025
 
 ---
 
-## 3. `free`
+## 3. *free*
 **Definition:**
 Shows memory usage details.
 
@@ -50,7 +50,7 @@ Swap:          2.0G        0.5G        1.5G
 
 ---
 
-## 4. `uname`
+## 4. *uname*
 **Definition:**
 Displays system information.
 
@@ -66,7 +66,7 @@ Linux myserver 5.15.0-25-generic #26-Ubuntu SMP x86_64 GNU/Linux
 
 ---
 
-## 5. `history`
+## 5. *history*
 **Definition:**
 Shows the list of previously executed commands.
 
@@ -85,7 +85,7 @@ history
 
 ---
 
-## 6. `man`
+## 6. *man*
 **Definition:**
 Displays the manual for a command.
 
@@ -103,7 +103,7 @@ NAME
 
 ---
 
-## 7. `apt`
+## 7. *apt*
 **Definition:**
 Package manager for Debian-based systems.
 
@@ -120,7 +120,7 @@ Building dependency tree... Done
 
 ---
 
-## 8. `snap`
+## 8. *snap*
 **Definition:**
 Package management system for Snap applications.
 
@@ -137,7 +137,7 @@ core           16-2.51.1      11167 latest/stable  Canonical✓     core
 
 ---
 
-## 9. `flatpak`
+## 9. *flatpak*
 **Definition:**
 Universal package management system for Linux.
 
