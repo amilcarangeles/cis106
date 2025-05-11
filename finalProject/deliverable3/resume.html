@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>resume.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<img src="profile.jpeg" alt="Amilcar Angeles" width="100"/>
+<h1 id="amilcar-angeles">Amilcar Angeles</h1>
+<p><strong>Cloud Administrator</strong>
+Passaic, New Jersey | aangeles@students.edu |  +973 563 1234  | <a href="https://linkedin.com/en/aangeles">LinkedIn</a></p>
+<hr>
+<h2 id="experience">Experience</h2>
+<p><strong>IT Project Manager Senior at Angeles Media</strong>
+<em>Santo Domingo,  R.D. | December 2017 – Present | 9 year 6 months</em></p>
+<ul>
+<li>Led entire lifecycle of IT projects valued at over $200K, from initiation to closure, ensuring alignment with PMO standards and driving a 25% increase in delivery efficiency through Agile and PMI-based methodologies.</li>
+<li>Supervised and coordinated cross-functional teams of up to 45 staff members, fostering a proactive and self-managed work culture to ensure on-time project delivery.</li>
+<li>Designed and maintained relational database systems using MySQL/MariaDB and Microsoft SQL Server; implemented DML/DDL scripts to support application development, data integration, and system reporting.</li>
+</ul>
+<p><strong>IT Consultant at Rubycom</strong>
+<em>Santo Domingo, R.D. | August 2016 – December 2017 | 1 year 4 months</em></p>
+<ul>
+<li>Assessed IT infrastructures for over 980 enterprise clients, identifying inefficiencies and recommending solutions aligned with business goals and cost-saving strategies.</li>
+<li>Delivered expert guidance on virtualization (VMware, Hyper-V) and VPN implementations, restructuring remote connectivity for a hundred users, and overall infrastructure security.</li>
+<li>Trained client teams in IT best practices, accelerating knowledge transfer and providing long-term support for operational improvements.</li>
+</ul>
+<p><strong>Network Administrator at BIONUCLEAR</strong>
+<em>Santo Domingo, R.D. | March 2010 – August 2016 | 6 years 7 months</em></p>
+<ul>
+<li>Engineered and oversaw Layer 3 network infrastructure, including firewalls, managed switches, and edge routers, ensuring secure, low-latency connectivity across 16+ departments.</li>
+<li>Orchestrated Active Directory services for 367 users, orchestrating 19 Windows Server and 7 Linux environments to maintain infrastructure stability, enforce data protection, and streamline authentication workflows.</li>
+<li>Provided customer service and technical support to 367 users across 16 departments, resolving complex network issues while upholding a proactive approach to infrastructure management.</li>
+</ul>
+<hr>
+<h2 id="leadership--extracurricular-activities">Leadership &amp; Extracurricular Activities</h2>
+<p><strong>Governor's Eddy Murphy Fellows Program Internship</strong>
+<em>A task management web app built to help users organize their daily activities efficiently.</em></p>
+<ul>
+<li>Collaborated with municipal more than 10 wide-state leaders to research and present community development proposals focused on public health, education, and infrastructure needs.</li>
+<li>Conducted data analysis on 15 different city-wide initiatives, contributing to evidence-based decision-making for local policy improvements.</li>
+<li>Held weekly leadership development sessions with state officials, streamlining civic engagement, policy literacy, and public administration skills.</li>
+<li>Redesigned the Widestate Fellows Program intern portal for the Widestate Chamber of Commerce of New Jersey, restructuring user experience and access to program resources through a modern, mobile-responsive interface.</li>
+<li>Delivered a final capstone project addressing youth outreach strategies, presented to senior city administrators and policy advisors for those 16 leaders.</li>
+</ul>
+<p><strong>DevBoard</strong>
+<em>An open-source project management dashboard application for small teams to track tasks and goals.</em></p>
+<ul>
+<li>Built with React, TypeScript, and MaterialUI, providing a seamless experience.</li>
+<li>Integrated Redux for state management and Axios to handle API requests.</li>
+<li>Utilized Jest for unit tests to ensure code quality and reliability.</li>
+</ul>
+<hr>
+<h2 id="skills">Skills</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Knowledge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Technical</strong></td>
+<td>Python, C++, HTML, CSS, JavaScript, PHP, SQL, C#, VPN, FTP, Hosting, Web Server, DNS, IPSec, IMAP, SMTP, POP3, M365, Azure, Google Admin Console, Google Workspace, Routing &amp; Switching, Project Management, PowerShell, Visual Basic Script, Bash Shell, Scripting</td>
+</tr>
+<tr>
+<td><strong>Languages</strong></td>
+<td>Spanish – Native / Bilingual Proficiency (ILR Level 5)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="education">Education</h2>
+<table>
+<thead>
+<tr>
+<th>Degree</th>
+<th>School</th>
+<th>Location</th>
+<th>Year</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Associate in Applied Science - Computer Information Technology</strong></td>
+<td>Passaic County Community College</td>
+<td>Paterson, NJ</td>
+<td><em>Expected: May 2025</em></td>
+<td>Specialist in Network Administration; Coursework: Software/Hardware Maintenance &amp; Diagnostics, Networking Essentials, Network Infrastructure &amp; Administration, Networking Security</td>
+</tr>
+<tr>
+<td><strong>Bachelor of Technology (BTech)</strong></td>
+<td>Universidad Nacional Tecnológica</td>
+<td>Santo Domingo, D.R.</td>
+<td>Dec 2016</td>
+<td>Coursework: Operating Systems, Electronic Circuits, Hardware Engineering, Systems Administration, System Analysis &amp; Design, Systems Integration, Telecommunications</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="certificates">Certificates</h2>
+<ul>
+<li>
+<p><strong>Microsoft Modern Desktop Associate</strong> – Microsoft</p>
+</li>
+<li>
+<p><strong>Microsoft Solutions Architect</strong> – Microsoft</p>
+</li>
+<li>
+<p><strong>Microsoft Certified Professional (MCP)</strong> – Microsoft</p>
+</li>
+<li>
+<p><strong>Microsoft Enterprise Administrator Expert</strong> – Microsoft</p>
+</li>
+<li>
+<p><strong>Microsoft Certified Solutions Expert (MCSE)</strong> – Microsoft</p>
+</li>
+<li>
+<p><strong>CompTIA A+</strong> – Certified Professional</p>
+</li>
+<li>
+<p><strong>CompTIA Network+</strong> – Certified Professional</p>
+</li>
+<li>
+<p><strong>CompTIA Cloud+</strong> – Certified Professional</p>
+</li>
+<li>
+<p><strong>CompTIA Server+</strong> – Certified Professional</p>
+</li>
+<li>
+<p><strong>CompTIA Security+</strong> – Certified Professional</p>
+</li>
+<li>
+<p><strong>CompTIA IT Fundamentals (Tech+)</strong> – Certified Professional</p>
+</li>
+<li>
+<p><strong>Certified ISO Auditor</strong> – ISO</p>
+</li>
+<li>
+<p><strong>Information Security</strong> – ISO</p>
+</li>
+<li>
+<p><strong>ISO/IEC 20000 IT Service Management Associate</strong> – ISO</p>
+</li>
+<li>
+<p><strong>GIAC Certified ISO-27000 Specialist</strong> – GIAC</p>
+</li>
+<li>
+<p><strong>ITIL Foundation Certificate</strong> – ITIL</p>
+</li>
+<li>
+<p><strong>Project Management Professional (PMP)</strong> – PMI</p>
+</li>
+<li>
+<p><strong>Networking and Systems Administration</strong> – Independent</p>
+</li>
+</ul>
+<hr>
+<h2 id="interests">Interests</h2>
+<ul>
+<li><strong>Hobbies</strong>: Exploring Linux distributions and open-source tools, contributing to IT forums and student mentoring, playing classical guitar, and cycling for stress relief.</li>
+</ul>
+
+</body>
+</html>
